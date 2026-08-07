@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Blog Writer</title>
+    <meta name="description" content="Turn a topic into a polished, ready-to-publish markdown blog post." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hero">
+        <div class="brand"><span class="logo">✍️</span><span class="brand-name">AI Blog Writer</span></div>
+        <h1>Turn a topic into a <em>publish-ready</em> blog post.</h1>
+        <p class="sub">Type a topic, pick a tone, and get clean structured Markdown — hook, sections, key takeaways, and a conclusion. Works right now, no API key required.</p>
+      </header>
+      <section class="composer" id="composer">
+        <label class="field"><span class="label">Topic</span>
+          <textarea id="topic" rows="3" maxlength="500" placeholder="e.g. Why remote teams need async-first communication"></textarea>
+          <span class="counter" id="counter">0 / 500</span></label>
+        <div class="row">
+          <label class="field"><span class="label">Tone</span>
+            <select id="tone"><option value="professional">Professional</option><option value="friendly">Friendly</option><option value="witty">Witty</option><option value="inspirational">Inspirational</option><option value="neutral">Neutral</option></select></label>
+          <label class="field"><span class="label">Length</span>
+            <select id="length"><option value="short">Short (~400 words)</option><option value="medium" selected>Medium (~850 words)</option><option value="long">Long (~1600 words)</option></select></label>
+        </div>
+        <label class="field"><span class="label">Audience <span class="opt">(optional)</span></span>
+          <input id="audience" type="text" maxlength="120" placeholder="e.g. startup founders, beginner developers" /></label>
+        <button id="generate" class="btn">Generate article</button>
+        <p class="mode-note" id="mode-note"></p>
+      </section>
+      <section class="result hidden" id="result" aria-live="polite">
+        <div class="result-toolbar">
+          <div class="tabs"><button class="tab active" data-tab="preview">Preview</button><button class="tab" data-tab="source">Markdown</button></div>
+          <div class="actions"><span class="badge" id="mode-badge"></span><button id="copy" class="btn small">Copy Markdown</button><button id="download" class="btn small ghost">Download .md</button></div>
+        </div>
+        <article class="preview" id="preview"></article>
+        <pre class="source hidden" id="source"></pre>
+      </section>
+    </main>
+    <footer class="foot"><p>Built with Node.js + Express · Add an <code>OPENAI_API_KEY</code> to unlock real AI-generated articles.</p></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
