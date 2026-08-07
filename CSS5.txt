@@ -1,0 +1,3 @@
+body { background: #0d1117; }
+h1 { color: #ffffff; }
+.wrap { max-width: 860px; }
