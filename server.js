@@ -2,6 +2,7 @@ import express from "express";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { generateArticle } from "./src/generator.js";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json({ limit: "64kb" }));
