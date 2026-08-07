@@ -1,0 +1,50 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(110,139,255,0.12), transparent 60%), #0d1117;
+  color: #e6edf3;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 24px; }
+.hero { text-align: center; margin-bottom: 36px; }
+.brand { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: #8b949e; font-size: 14px; letter-spacing: 0.02em; margin-bottom: 22px; }
+.logo { font-size: 18px; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 14px; letter-spacing: -0.02em; }
+h1 em { font-style: normal; background: linear-gradient(90deg, #58a6ff, #6e8bff); color: transparent; }
+.sub { color: #8b949e; max-width: 560px; margin: 0 auto; font-size: 1.05rem; }
+.composer { background: #161b22; border: 1px solid #2d333b; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
+.field { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.label { font-size: 13px; font-weight: 600; color: #8b949e; text-transform: uppercase; letter-spacing: 0.06em; }
+.opt { text-transform: none; letter-spacing: 0; font-weight: 400; color: #8b949e; }
+textarea, input, select { width: 100%; background: #1c2333; border: 1px solid #2d333b; border-radius: 10px; color: #e6edf3; padding: 12px 14px; font-size: 15px; font-family: inherit; resize: vertical; transition: border-color 0.15s, box-shadow 0.15s; }
+textarea:focus, input:focus, select:focus { outline: none; border-color: #58a6ff; box-shadow: 0 0 0 3px rgba(88,166,255,0.15); }
+select { appearance: none; cursor: pointer; }
+.row { display: flex; gap: 14px; }
+.counter { font-size: 12px; color: #8b949e; align-self: flex-end; }
+.btn { background: linear-gradient(90deg, #6e8bff, #58a6ff); color: #fff; border: none; border-radius: 10px; padding: 14px 20px; font-size: 15px; font-weight: 600; cursor: pointer; transition: transform 0.1s, filter 0.15s; }
+.btn:hover:not(:disabled) { filter: brightness(1.08); }
+.btn:active:not(:disabled) { transform: translateY(1px); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn.small { padding: 8px 14px; font-size: 13px; }
+.btn.ghost { background: transparent; border: 1px solid #2d333b; color: #e6edf3; }
+.mode-note { font-size: 13px; color: #8b949e; margin: 0; text-align: center; }
+.result { margin-top: 28px; background: #161b22; border: 1px solid #2d333b; border-radius: 14px; overflow: hidden; }
+.result-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #2d333b; flex-wrap: wrap; background: #1c2333; }
+.tabs { display: flex; gap: 4px; }
+.tab { background: transparent; border: none; color: #8b949e; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 500; }
+.tab.active { background: rgba(110,139,255,0.18); color: #e6edf3; }
+.actions { display: flex; align-items: center; gap: 10px; }
+.badge { font-size: 12px; color: #3fb950; border: 1px solid rgba(63,185,80,0.4); padding: 3px 9px; border-radius: 999px; }
+.preview { padding: 24px 28px; max-width: 720px; margin: 0 auto; }
+.preview h1 { font-size: 1.9rem; margin-top: 0; }
+.preview h2 { font-size: 1.3rem; margin-top: 1.6em; border-bottom: 1px solid #2d333b; padding-bottom: 6px; }
+.preview a { color: #58a6ff; }
+.preview code { background: #1c2333; padding: 2px 6px; border-radius: 5px; font-size: 0.9em; }
+.preview blockquote { border-left: 3px solid #6e8bff; margin-left: 0; padding-left: 16px; color: #8b949e; }
+.preview li { margin: 4px 0; }
+.source { margin: 0; padding: 20px 24px; background: #0b0f14; color: #c9d1d9; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 13.5px; line-height: 1.7; overflow-x: auto; white-space: pre-wrap; word-break: break-word; }
+.hidden { display: none; }
+.foot { text-align: center; color: #8b949e; font-size: 13px; padding: 30px 20px 40px; }
+.foot code { background: #1c2333; padding: 2px 6px; border-radius: 5px; }
